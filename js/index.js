@@ -38,5 +38,83 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Images
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let circlesnippet = document.querySelector('#cta-img');
+circlesnippet.setAttribute('src', siteContent.cta["img-src"]);
+
+let horizontalsnippet = document.getElementById("middle-img");
+horizontalsnippet.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+//nav
+let anchors = document.querySelectorAll('a');
+anchors[0].textContent = siteContent.nav["nav-item-1"];
+anchors[0].style.color = 'green';
+anchors[1].textContent = siteContent.nav["nav-item-2"];
+anchors[1].style.color = 'green';
+anchors[2].textContent = siteContent.nav["nav-item-3"];
+anchors[2].style.color = 'green';
+anchors[3].textContent = siteContent.nav["nav-item-4"];
+anchors[3].style.color = 'green';
+anchors[4].textContent = siteContent.nav["nav-item-5"];
+anchors[4].style.color = 'green';
+anchors[5].textContent = siteContent.nav["nav-item-6"];
+anchors[5].style.color = 'green';
+
+let nav = document.querySelector('nav');
+
+let prependedNav = document.createElement('a');
+prependedNav.textContent = 'PREPENDED';
+prependedNav.style.color = 'green';
+
+let appendedNav = document.createElement('a');
+appendedNav.textContent = 'APPENDED';
+appendedNav.style.color = 'green';
+
+nav.appendChild(appendedNav);
+nav.prepend(prependedNav);
+
+
+
+
+//cta
+let headingText = document.querySelector('h1');
+headingText.innerHTML = 'DOM <br>IS<br> AWESOME';
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+//main content
+let h4Text = document.querySelectorAll('h4');
+h4Text[0].textContent = siteContent["main-content"]["features-h4"];
+h4Text[1].textContent = siteContent["main-content"]["about-h4"];
+h4Text[2].textContent = siteContent["main-content"]["services-h4"];
+h4Text[3].textContent = siteContent["main-content"]["product-h4"];
+h4Text[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainText = document.querySelectorAll('p');
+mainText[0].textContent = siteContent["main-content"]["features-content"];
+mainText[1].textContent = siteContent["main-content"]["about-content"];
+mainText[2].textContent = siteContent["main-content"]["services-content"];
+mainText[3].textContent = siteContent["main-content"]["product-content"];
+mainText[4].textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+
+h4Text[5].textContent = siteContent.contact["contact-h4"];
+
+let contact = document.querySelector('.contact');
+
+contact.children[1].textContent = siteContent.contact.address;
+contact.children[2].textContent = siteContent.contact.phone;
+contact.children[3].textContent = siteContent.contact.email;
+
+//footer 
+
+let footer = document.querySelector('footer');
+
+footer.children[0].textContent = siteContent.footer.copyright;
+
